@@ -1,0 +1,124 @@
+/* ============================================================
+   LoadingScreen — LoadingScreen.module.css
+   ============================================================ */
+
+.overlay {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px;
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 400px;
+}
+
+/* Brand */
+.brand {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  color: #2a2a4a;
+  text-transform: uppercase;
+  margin-bottom: 52px;
+}
+
+.brandAccent {
+  color: #7b6ff0;
+}
+
+/* Address block */
+.walletBlock {
+  text-align: center;
+  margin-bottom: 44px;
+}
+
+.analyzeLabel {
+  display: block;
+  font-size: 9px;
+  letter-spacing: 0.22em;
+  color: #6b6b8a;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.walletAddr {
+  font-size: 20px;
+  font-weight: 700;
+  color: #7b6ff0;
+  letter-spacing: 0.04em;
+}
+
+/* Steps list */
+.steps {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.step {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  opacity: 0.18;
+}
+
+.stepActive {
+  opacity: 1;
+  animation: slideIn 0.3s ease forwards;
+}
+
+.stepDone {
+  opacity: 0.55;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Dot indicator */
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #1e1e3a;
+  flex-shrink: 0;
+  transition: background 0.35s ease;
+}
+
+.stepActive .dot {
+  background: #e8e6f0;
+}
+
+.stepDone .dot {
+  background: #7b6ff0;
+}
+
+/* Step label */
+.stepLabel {
+  font-size: 12px;
+  color: #e8e6f0;
+  letter-spacing: 0.04em;
+  flex: 1;
+}
+
+/* Checkmark */
+.check {
+  font-size: 11px;
+  font-weight: 700;
+  color: #7b6ff0;
+  flex-shrink: 0;
+}

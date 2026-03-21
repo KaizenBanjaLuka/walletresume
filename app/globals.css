@@ -1,13 +1,31 @@
+/* ============================================================
+   wlltresume.xyz — Global styles
+   Design token reference:
+     bg:         #0d0d1a    bg-secondary: #11112a
+     accent:     #7b6ff0    accent-hover: #9b8ff5
+     text:       #e8e6f0    text-muted:   #6b6b8a
+     border:     #1e1e3a    border-accent:#7b6ff0
+     font:       'Space Mono', monospace (400 / 700)
+   ============================================================ */
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --bg:           #0d0d1a;
+  --bg-secondary: #11112a;
+  --accent:       #7b6ff0;
+  --accent-hover: #9b8ff5;
+  --text:         #e8e6f0;
+  --text-muted:   #6b6b8a;
+  --border:       #1e1e3a;
+  --border-accent:#7b6ff0;
+  --font:         'Space Mono', monospace;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 html,
@@ -17,17 +35,13 @@ body {
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--bg);
+  background-image: radial-gradient(circle, #2a2a4a 1px, transparent 1px);
+  background-size: 28px 28px;
+  color: var(--text);
+  font-family: var(--font);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
 }
 
 a {
@@ -35,8 +49,9 @@ a {
   text-decoration: none;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+button,
+input,
+textarea,
+select {
+  font-family: var(--font);
 }

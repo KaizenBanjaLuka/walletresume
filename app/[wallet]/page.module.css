@@ -1,0 +1,708 @@
+/* ============================================================
+   Wallet Resume Page — [wallet]/page.module.css
+   ============================================================ */
+
+/* ── Navigation (mirrors landing page) ── */
+.nav {
+  border-bottom: 1px solid var(--border);
+  width: 100%;
+}
+
+.navInner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 72px;
+}
+
+.navLeft {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.navBrand {
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: var(--text);
+}
+
+.navAccent {
+  color: var(--accent);
+}
+
+.navProtocol {
+  font-size: 9px;
+  font-weight: 400;
+  letter-spacing: 0.18em;
+  color: var(--text-muted);
+  text-transform: uppercase;
+}
+
+.navRight {
+  display: flex;
+  align-items: center;
+}
+
+.connectBtn {
+  background: transparent;
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  padding: 9px 20px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-radius: 3px;
+  transition: background 0.15s, color 0.15s;
+}
+
+.connectBtn:hover {
+  background: var(--accent);
+  color: #fff;
+}
+
+/* ── Page shell ── */
+.page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 0 32px;
+  width: 100%;
+}
+
+.main {
+  padding: 32px 0 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* ── Back link ── */
+.backLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: color 0.15s;
+}
+
+.backLink:hover {
+  color: var(--accent);
+}
+
+/* ── Header Card ── */
+.headerCard {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 28px 32px 0;
+}
+
+.headerTop {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  padding-bottom: 28px;
+}
+
+.avatar {
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  background: var(--accent);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: 700;
+  flex-shrink: 0;
+  letter-spacing: 0.02em;
+}
+
+.identity {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.ensNameText {
+  font-size: 21px;
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1.2;
+  letter-spacing: 0.01em;
+}
+
+.walletAddrText {
+  font-size: 13px;
+  color: var(--accent);
+  letter-spacing: 0.04em;
+}
+
+.walletMetaText {
+  font-size: 9px;
+  color: var(--text-muted);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  margin-top: 3px;
+}
+
+.scoreBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  flex-shrink: 0;
+}
+
+.scoreNum {
+  font-size: 56px;
+  font-weight: 700;
+  color: var(--accent);
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+.scoreLabel {
+  font-size: 9px;
+  color: var(--text-muted);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin-top: 4px;
+  text-align: right;
+}
+
+/* Score breakdown rows */
+.scoreBreakdown {
+  margin-top: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  width: 220px;
+}
+
+.breakdownRow {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.breakdownLabel {
+  font-size: 7px;
+  font-weight: 700;
+  color: var(--text-muted);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  width: 94px;
+  flex-shrink: 0;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.breakdownBar {
+  flex: 1;
+  height: 2px;
+  background: var(--border);
+  border-radius: 1px;
+  overflow: hidden;
+}
+
+.breakdownFill {
+  height: 100%;
+  background: var(--accent);
+  border-radius: 1px;
+  transition: width 0.5s ease;
+}
+
+.breakdownScore {
+  font-size: 8px;
+  font-weight: 700;
+  color: var(--accent);
+  letter-spacing: 0.04em;
+  width: 26px;
+  text-align: right;
+  flex-shrink: 0;
+}
+
+.breakdownMax {
+  color: var(--text-muted);
+  font-weight: 400;
+}
+
+/* Stats row */
+.statsRow {
+  display: flex;
+  border-top: 1px solid var(--border);
+}
+
+.statCol {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: 18px 12px;
+}
+
+.statCol + .statCol {
+  border-left: 1px solid var(--border);
+}
+
+.statBigVal {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text);
+  letter-spacing: -0.01em;
+}
+
+.statSmallLabel {
+  font-size: 8px;
+  font-weight: 700;
+  color: var(--text-muted);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+/* ── Generic section card ── */
+.section {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 24px 28px;
+}
+
+.sectionTitle {
+  font-size: 9px;
+  font-weight: 700;
+  color: var(--text-muted);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+}
+
+/* ── Protocol Experience ── */
+.tagList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.protoTag {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  border: 1px solid;
+  padding: 5px 11px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border-radius: 3px;
+  white-space: nowrap;
+}
+
+.tagCount {
+  opacity: 0.6;
+}
+
+/* ── DAO Participation ── */
+.daoList {
+  display: flex;
+  flex-direction: column;
+}
+
+.daoRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--border);
+  gap: 16px;
+}
+
+.daoRow:first-child {
+  padding-top: 0;
+}
+
+.daoRow:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.daoInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.daoNameText {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text);
+  letter-spacing: 0.02em;
+}
+
+.daoMetaText {
+  font-size: 9px;
+  color: var(--text-muted);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.daoBadgeTag {
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  padding: 4px 10px;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  border-radius: 3px;
+  flex-shrink: 0;
+}
+
+/* ── Chain Activity ── */
+.chainList {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.chainRow {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.chainNameText {
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--text-muted);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  width: 88px;
+  flex-shrink: 0;
+}
+
+.barTrack {
+  flex: 1;
+  height: 3px;
+  background: var(--border);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.barFill {
+  height: 100%;
+  background: var(--accent);
+  border-radius: 2px;
+  transition: width 0.6s ease;
+}
+
+.chainMetaText {
+  font-size: 9px;
+  color: var(--text-muted);
+  letter-spacing: 0.06em;
+  width: 148px;
+  text-align: right;
+  flex-shrink: 0;
+}
+
+/* ── NFT Portfolio ── */
+.nftGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.nftCard {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 14px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.nftCardName {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--text);
+  letter-spacing: 0.02em;
+  line-height: 1.35;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.nftCardCount {
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--accent);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.nftCardStatus {
+  font-size: 9px;
+  color: #22d3a0;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-top: 2px;
+}
+
+/* ── Resume Footer ── */
+.resumeFooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
+}
+
+.outlinedBtn {
+  background: transparent;
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  padding: 9px 18px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-radius: 3px;
+  transition: background 0.15s, color 0.15s;
+  white-space: nowrap;
+}
+
+.outlinedBtn:hover {
+  background: var(--accent);
+  color: #fff;
+}
+
+.twitterBtn {
+  background: transparent;
+  border: 1px solid #1d9bf0;
+  color: #1d9bf0;
+  padding: 9px 18px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-radius: 3px;
+  transition: background 0.15s, color 0.15s;
+  white-space: nowrap;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+}
+
+.twitterBtn:hover {
+  background: #1d9bf0;
+  color: #fff;
+}
+
+.pdfWrap {
+  position: relative;
+}
+
+.tooltip {
+  position: absolute;
+  bottom: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.15s;
+  border-radius: 3px;
+}
+
+.pdfWrap:hover .tooltip {
+  opacity: 1;
+}
+
+.powered {
+  font-size: 9px;
+  color: #2a2a4a;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+/* ── Empty state ── */
+.emptyState {
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  padding: 20px 0;
+  opacity: 0.5;
+}
+
+/* ── Error page ── */
+.errorPage {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.errorWrap {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px;
+}
+
+.errorCard {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 48px 40px;
+  text-align: center;
+  max-width: 440px;
+  width: 100%;
+}
+
+.errorIcon {
+  font-size: 28px;
+  color: var(--text-muted);
+  margin-bottom: 16px;
+}
+
+.errorTitle {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--text);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.errorText {
+  font-size: 12px;
+  color: var(--text-muted);
+  line-height: 1.7;
+  margin-bottom: 28px;
+  word-break: break-all;
+}
+
+.errorBack {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  padding: 9px 20px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  border-radius: 3px;
+  text-decoration: none;
+  transition: background 0.15s, color 0.15s;
+}
+
+.errorBack:hover {
+  background: var(--accent);
+  color: #fff;
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 20px;
+  }
+
+  .headerCard {
+    padding: 24px 20px 0;
+  }
+
+  .headerTop {
+    flex-wrap: wrap;
+  }
+
+  .scoreBlock {
+    flex-direction: row;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 100%;
+    border-top: 1px solid var(--border);
+    padding-top: 16px;
+    margin-top: 4px;
+  }
+
+  .scoreNum {
+    font-size: 40px;
+  }
+
+  .scoreLabel {
+    text-align: left;
+  }
+
+  .scoreBreakdown {
+    display: none;
+  }
+
+  .nftGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .chainMetaText {
+    width: auto;
+    font-size: 8px;
+  }
+
+  .statBigVal {
+    font-size: 18px;
+  }
+
+  .section {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .resumeFooter {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nftGrid {
+    gap: 8px;
+  }
+
+  .chainNameText {
+    width: 72px;
+  }
+}
