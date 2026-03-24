@@ -279,6 +279,26 @@
   text-align: center;
 }
 
+/* ── Cross-reference ── */
+.crossRef {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  padding: 0 4px;
+}
+
+.crossRefLink {
+  color: var(--accent);
+  text-decoration: none;
+  transition: opacity 0.15s;
+}
+
+.crossRefLink:hover {
+  opacity: 0.75;
+}
+
 /* ── Generic section card ── */
 .section {
   background: var(--bg-secondary);

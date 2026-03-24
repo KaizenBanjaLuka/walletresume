@@ -267,6 +267,19 @@ export default function WalletResumePage({ params }) {
             </div>
           </div>
 
+          {/* ── Cross-reference ── */}
+          <div className={styles.crossRef}>
+            Own this wallet? Check your reputation score on{' '}
+            <a
+              href="https://wlltrep.xyz"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.crossRefLink}
+            >
+              WLLTREP.XYZ →
+            </a>
+          </div>
+
           {/* ── 2. Protocol Experience ── */}
           <div className={styles.section}>
             <SectionTitle>{'// Protocol Experience'}</SectionTitle>
