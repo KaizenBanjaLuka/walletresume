@@ -12,7 +12,7 @@
 | Role | Project & Product Manager. Web3/crypto background. No traditional dev experience. |
 | Building | AI-assisted development using Claude (chat) + Claude Code (terminal/IDE) |
 | GitHub | KaizenBanjaLuka |
-| Writing | medium.com/@fikko87_90982 |
+| Writing | medium.com/@bojan-pilipovic |
 
 ---
 
