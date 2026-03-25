@@ -53,23 +53,25 @@
   text-transform: uppercase;
 }
 
-.connectBtn {
-  background: transparent;
-  border: 1px solid #7b6ff0;
-  color: #7b6ff0;
-  padding: 9px 20px;
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  cursor: pointer;
-  border-radius: 3px;
-  transition: background 0.15s, color 0.15s;
+.navBrandLink {
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
 }
 
-.connectBtn:hover {
-  background: #7b6ff0;
-  color: #fff;
+.builtOnLink {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #6b6b8a;
+  text-decoration: none;
+  transition: color 0.15s;
+}
+
+.builtOnLink:hover {
+  color: #7b6ff0;
 }
 
 /* ── Hero ── */

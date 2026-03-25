@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import WalletInput from '@/components/WalletInput';
 import styles from './page.module.css';
 
@@ -18,13 +19,22 @@ export default function HomePage() {
         <div className={styles.container}>
           <div className={styles.navInner}>
             <div className={styles.navLeft}>
-              <div className={styles.navBrand}>
-                WLLTRESUME<span className={styles.navAccent}>.XYZ</span>
-              </div>
-              <div className={styles.navProtocol}>Onchain Resume Protocol</div>
+              <Link href="/" className={styles.navBrandLink}>
+                <div className={styles.navBrand}>
+                  WLLTRESUME<span className={styles.navAccent}>.XYZ</span>
+                </div>
+                <div className={styles.navProtocol}>Onchain Resume Protocol</div>
+              </Link>
             </div>
             <div className={styles.navRight}>
-              <button className={styles.connectBtn}>Connect Wallet</button>
+              <a
+                href="https://alchemy.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.builtOnLink}
+              >
+                Built on Alchemy
+              </a>
             </div>
           </div>
         </div>
