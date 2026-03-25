@@ -45,23 +45,25 @@
   align-items: center;
 }
 
-.connectBtn {
-  background: transparent;
-  border: 1px solid var(--accent);
-  color: var(--accent);
-  padding: 9px 20px;
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  cursor: pointer;
-  border-radius: 3px;
-  transition: background 0.15s, color 0.15s;
+.navBrandLink {
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
 }
 
-.connectBtn:hover {
-  background: var(--accent);
-  color: #fff;
+.builtOnLink {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: color 0.15s;
+}
+
+.builtOnLink:hover {
+  color: var(--accent);
 }
 
 /* ── Page shell ── */
